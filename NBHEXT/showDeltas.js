@@ -50,7 +50,7 @@ function showDeltas()
     if (count > 2)
     {
         var contestId = document.location.href.replace(/\D+/ig, ',').substr(1).split(',')[0];
-        $.getJSON("http://codeforces.com/api/contest.standings?contestId=" + contestId,
+        $.getJSON("http://codeforces.com/api/contest.standings?showUnofficial=true&contestId=" + contestId,
             function(data)
             {
                 var handles = [];
